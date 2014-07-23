@@ -1,38 +1,32 @@
-Role Name
-========
+# znzj.github-users
 
-A brief description of the role goes here.
+Setup users with github users' ssh keys.
 
-Requirements
-------------
+## Requirements
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+- OpenSSH Server
+- sudo with `/etc/sudoers.d` if enable sudoers
 
-Role Variables
---------------
+## Role Variables
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+- `github_users: [ { username: name, sudoers: bool } ]`
 
-Dependencies
-------------
+## Dependencies
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None.
 
-Example Playbook
--------------------------
+## Example Variables
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+```
+github_users:
+- username: firstuser
+  sudoers: yes
+- username: seconduser
+  sudoers: no
+- username: youruser
+  sudoers: yes
+```
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+## License
 
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+MIT
