@@ -1,0 +1,7 @@
+---
+- template: src=sudoers.j2 dest=/etc/sudoers.d/{{ item.username }} validate='visudo -cf %s' owner=root group=root mode=0440
+  when: item.sudoers
+  with_items: github_users
+- file: state=absent dest=/etc/sudoers.d/{{ item.username }}
+  when: not item.sudoers
+  with_items: github_users

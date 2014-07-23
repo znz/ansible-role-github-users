@@ -1,0 +1,5 @@
+---
+# tasks file for znzj.github-users
+- include: github.yml tags=github_users,github_users_github
+- include: sudoers.yml tags=github_users,github_users_sudoers
+- include: sshd.yml tags=github_users,github_users_sshd

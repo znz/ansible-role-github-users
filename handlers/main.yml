@@ -1,0 +1,4 @@
+---
+# handlers file for znzj.github-users
+- name: restart ssh
+  service: name=ssh state=restarted
