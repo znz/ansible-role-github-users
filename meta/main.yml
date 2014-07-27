@@ -1,6 +1,5 @@
 ---
 galaxy_info:
-  author: your name
   author: Kazuhiro NISHIYAMA
   description: "Setup users with github users' ssh keys"
   license: MIT
